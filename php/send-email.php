@@ -1,7 +1,7 @@
 <?php
 	// Your Email
-	$recipient = "yourname@yourdomain.com"; // PLEASE SET YOUR EMAIL ADDRESS
-	$recaptcha_secret_key = 'yourAPIkey'; // PLEASE SET YOUR GOOGLE RECAPTCHA API KEY. If you are not using, please leave it blank.
+	$recipient = "999.jeminiii.999@gmail.com"; // PLEASE SET YOUR EMAIL ADDRESS
+	$recaptcha_secret_key = ''; // PLEASE SET YOUR GOOGLE RECAPTCHA API KEY. If you are not using, please leave it blank.
 
 	if(!empty($recaptcha_secret_key) && array_key_exists('recaptcha',$_POST) ) {
 		returnAndExitAjaxResponse(
@@ -79,13 +79,7 @@
 	$email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
 	$message = filter_var($_POST["message"], FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 
-	// If non required fields are empty
-	if ( empty($lname) ){
-		$lname = "No last name entered.";
-	}
-	if ( empty($website) ){
-		$website = "No website entered.";
-	}
+	
 
 	// Headers
 	$headers = 'From: '.$fname.' <'.$email.'>' . "\r\n";
@@ -155,6 +149,7 @@ function returnAndExitAjaxResponse ($_ajaxResponse) {
 		$_ajaxResponse = array('response'=>false,'message'=>'Unknown error occurred.');
 	}
 	header("Content-Type: application/json; charset=utf-8");
+    header("Access-Control-Allow-Origin: *");
 	echo json_encode($_ajaxResponse);
 	die();
 }
