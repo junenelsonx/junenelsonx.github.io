@@ -551,15 +551,6 @@
 								<h2 style="color: lightgray">Upcoming Events</h2>
 							</div>
 							<div class="column width-9">
-								<article class="post horizon" data-animate-in="preset:slideInRightShort;duration:800ms;" data-threshold="1">
-									<div class="post-content">
-										<h2 class="post-title"><a href="https://www.instagram.com/quartzoakland/" target="_blank">Quartz Queer Arts Market</a></h2>
-										<div class="post-info">
-											<span class="post-date">Saturday February 22nd 1-5pm</span>
-                                        <p>PLACE Community ~ 1121 64th St, Oakland</p>
-										</div>
-									</div>
-								</article>
 								<article class="post horizon" data-animate-in="preset:slideInRightShort;duration:800ms;delay:200ms;" data-threshold="1">
 									<div class="post-content">
 										<h2 class="post-title"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeO94AJ2uOjGEVDPMo-VQ36DSDmWVoQFKqhNOuZyFwLGyJ76w/viewform?usp=dialog" target="_blank">Intro to Chainmail Workshop</a></h2>
@@ -617,8 +608,9 @@
 								<div class="row">
 									<div class="column width-9 offset-3">
 										<div class="contact-form-container">
-											<form class="contact-form" action="php/send-email.php" method="post" novalidate>
-												<div class="row">
+                                            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" novalidate>
+                                                <input type="hidden" name="access_key" value="9c606540-b2ab-47f4-b724-baa9494ba4b0">
+                                                <div class="row">
 													<div class="column width-6">
 														<div class="field-wrapper">
 															<input type="text" name="fname" class="form-fname form-element" placeholder="Name*" tabindex="1" required>
@@ -638,10 +630,10 @@
 														<div class="field-wrapper">
 															<textarea name="message" class="form-message form-element" placeholder="Message*" tabindex="5" required></textarea>
 														</div>
-														<input type="submit" value="Send Email" class="form-submit button bkg-charcoal bkg-hover-theme color-white color-hover-white">
+														<input type="submit" value="Send Message" class="form-submit button bkg-charcoal bkg-hover-theme color-white color-hover-white">
 													</div>
 												</div>
-											</form>
+                                            </form>
 											<div class="form-response"></div>
 										</div>
 									</div>
@@ -756,7 +748,8 @@
 						<div class="column width-12 left">
 							<h2 class="mb-50">Say Hello!</h2>
 							<div class="contact-form-container no-margin-bottom">
-								<form class="contact-form" action="php/send-email.php" method="post" novalidate>
+								<form action="https://api.web3forms.com/submit" method="POST" class="contact-form" novalidate>
+                                     <input type="hidden" name="access_key" value="9c606540-b2ab-47f4-b724-baa9494ba4b0">
 									<div class="row">
 										<div class="column width-6">
 											<input type="text" name="fname" class="form-fname form-element medium" placeholder="Name*" tabindex="1" required>
@@ -770,8 +763,8 @@
 									</div>
 									<div class="row">
 										<div class="column width-12">
-											<textarea name="message" class="form-message form-element medium" placeholder="Describe your project or just say hello...*" tabindex="5" required></textarea>
-											<input type="submit" value="Send Email" class="form-submit button medium bkg-charcoal bkg-hover-theme color-white color-hover-white">
+											<textarea name="message" class="form-message form-element medium" placeholder="Message*" tabindex="5" required></textarea>
+											<input type="submit" value="Send Message" class="form-submit button medium bkg-charcoal bkg-hover-theme color-white color-hover-white">
 										</div>
 									</div>
 								</form>
@@ -808,7 +801,7 @@
 						<div class="column width-3">
 							<div class="widget">
 								<h4 class="widget-title">Contact</h4>
-                                <p class="mb-10"><a href="mailto:#">999.jeminiii.999@gmail.com</a></p>
+                                <p class="mb-10"><a href="mailto:999.jeminiii.999@gmail.com">999.jeminiii.999@gmail.com</a></p>
 								<!--address class="mb-20">
 									126-130 Crosby Street, Soho<br>
 									New York City, NY 10012, U.S.
